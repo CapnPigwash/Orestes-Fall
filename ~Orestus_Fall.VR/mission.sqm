@@ -8,7 +8,7 @@ class EditorData
 	toggles=2;
 	class ItemIDProvider
 	{
-		nextID=4648;
+		nextID=4646;
 	};
 	class LayerIndexProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={1278.3101,693.85211,217.78152};
-		dir[]={-0.92940092,-0.31000528,0.20069411};
-		up[]={-0.30306551,0.9507184,0.065443344};
-		aside[]={0.21109079,7.7599543e-007,0.97755814};
+		pos[]={1456.3319,746.02887,98.100929};
+		dir[]={-0.48757005,-0.55979842,0.6700651};
+		up[]={-0.32938278,0.82860518,0.45267254};
+		aside[]={0.80863065,1.5925616e-007,0.58839691};
 	};
 };
 binarizationWanted=0;
-sourceName="Orestus_Fall";
+sourceName="~Orestus_Fall";
 addons[]=
 {
 	"A3_Characters_F",
@@ -92,13 +92,13 @@ addons[]=
 	"ace_medical_treatment",
 	"Max_DropShip",
 	"MyAddon",
-	"OPTRE_BW_DoorConsole"
+	"CadFoot"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=51;
+		items=52;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -386,6 +386,11 @@ class AddonsMetaData
 			className="MyAddon";
 			name="Outer Space";
 			author="Sanchez";
+		};
+		class Item51
+		{
+			className="CadFoot";
+			name="CadFoot";
 		};
 	};
 };
@@ -18168,7 +18173,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=14;
+		items=16;
 		class Item0
 		{
 			dataType="Logic";
@@ -43700,10 +43705,10 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={2530.1348,459.9996,732.97119};
+						position[]={2504.7009,438.16885,692.93384};
 					};
 					side="West";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						isPlayer=1;
@@ -43787,12 +43792,14 @@ class Mission
 					};
 					id=4628;
 					type="Max_CMA";
+					atlOffset=433.16742;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=4620;
+			atlOffset=433.16742;
 		};
 		class Item8
 		{
@@ -43832,7 +43839,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={-502.6969,1223.7585,2263.1499};
+				position[]={-809.96033,953.88586,2263.1499};
 			};
 			side="Empty";
 			class Attributes
@@ -43840,7 +43847,7 @@ class Mission
 			};
 			id=4632;
 			type="SZ_Saturn";
-			atlOffset=818.75848;
+			atlOffset=548.88586;
 		};
 		class Item10
 		{
@@ -43860,53 +43867,123 @@ class Mission
 		class Item11
 		{
 			dataType="Trigger";
-			position[]={2909.3667,461.24399,682.66406};
+			position[]={2493.543,626.04303,659.83698};
 			class Attributes
 			{
 				onActivation="Gate1 animate [""open_door_up"",1];" \n "playSound3D [""WHobjects\ships\sounds\door_01_combined.ogg"", player, false, getPosASL this, 4];";
-				sizeA=2;
-				sizeB=2;
+				sizeA=100;
+				sizeB=100;
 				timeout[]={2,2,2};
 				repeatable=1;
 				activationBy="ANYPLAYER";
+				isRectangle=1;
 			};
 			id=4636;
 			type="EmptyDetectorAreaR50";
-			atlOffset=456.24399;
+			atlOffset=153.2998;
 		};
 		class Item12
 		{
-			dataType="Trigger";
-			position[]={2910.4163,461.345,758.52277};
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={1003.9922,582.81067,294.24551};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+					};
+					id=4640;
+					type="TIOW_Cad_GM_Flamer_667th";
+					atlOffset=28.768799;
+				};
+			};
 			class Attributes
 			{
-				onActivation="Gate1 animate [""open_door_up"",0];" \n "playSound3D [""WHobjects\ships\sounds\door_01_combined.ogg"", player, false, getPosASL this, 4];";
-				sizeA=2;
-				sizeB=2;
-				timeout[]={30,30,30};
-				activationBy="ANYPLAYER";
 			};
-			id=4643;
-			type="EmptyDetectorAreaR50";
-			atlOffset=456.345;
+			id=4639;
+			atlOffset=28.768799;
 		};
 		class Item13
 		{
-			dataType="Object";
-			class PositionInfo
+			dataType="Group";
+			side="West";
+			class Entities
 			{
-				position[]={2533.582,460.91901,732.52802};
-				angles[]={0,3.1446819,0};
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={972.1947,582.82202,405.35852};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=4642;
+					type="TIOW_Cad_GM_Flamer_667th";
+				};
 			};
-			side="Empty";
-			flags=1;
 			class Attributes
 			{
-				init="this AddAction [""Remotely Open Orestus Airlock Doors"", {Gate1 animate [""open_door_up"",1]}];" \n "" \n "this AddAction [""Remotely Close Orestus Airlock Doors"", {Gate1 animate [""open_door_up"",0]}];" \n "";
 			};
-			id=4646;
-			type="OPTRE_RS_ConsoleCorvette_SysGreen";
-			atlOffset=14.115295;
+			id=4641;
+		};
+		class Item14
+		{
+			dataType="Trigger";
+			position[]={964.23297,626.14398,403.54099};
+			class Attributes
+			{
+				onActivation="Gate1 animate [""open_door_up"",0];" \n "playSound3D [""WHobjects\ships\sounds\door_01_combined.ogg"", player, false, getPosASL this, 4];";
+				sizeA=25;
+				sizeB=25;
+				timeout[]={30,30,30};
+				activationBy="ANYPLAYER";
+				isRectangle=1;
+			};
+			id=4643;
+			type="EmptyDetectorAreaR50";
+			atlOffset=6.1035156e-005;
+		};
+		class Item15
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={962.80804,626.04431,402.21243};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=4645;
+					type="TIOW_Cad_GM_Flamer_667th";
+				};
+			};
+			class Attributes
+			{
+			};
+			id=4644;
 		};
 	};
 };

@@ -10,3 +10,47 @@
 disableChannels[]={0,2,4};
 
 respawnOnStart = 0;
+
+
+class CfgMusic
+{
+sounds[] = {01,02};
+class 01
+{
+name = "01 - Bad Road";
+sound[] = {"music\badroad.ogg", db+10, 1.0};
+titles[] = {0,""};
+};
+class 02
+{
+name = "02 - Begins";
+sound[] = {"music\begins2.ogg", db+15, 1.0};
+titles[] = {0,""};
+};
+
+
+};
+
+class CfgSounds
+
+{
+	sounds[] = {01,02,03,04,05,06,07,08,09};
+	class 01
+	{
+		name = "01 - Alarm Alien 3";
+		sound[] = {"sounds\alarmalien3.ogg", 2.0, 1, 100};
+		titles[] = {0,""};
+	};
+	class 02
+	{
+		name = "02 - Alert Small";
+		sound[] = {"sounds\alertsmall.ogg", 2.0, 1, 100};
+		titles[] = {0,""};
+	};
+	class 03
+	{
+		name = "03 - Chains";
+		sound[] = {"chains.ogg", 2.0, 1, 100};
+		titles[] = {0,""};
+	};	
+};

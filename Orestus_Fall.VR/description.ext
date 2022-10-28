@@ -38,19 +38,25 @@ class CfgSounds
 	class 01
 	{
 		name = "01 - Alarm Alien 3";
-		sound[] = {"sounds\alarmalien3.ogg", 2.0, 1, 100};
+		sound[] = {"sound\alarmalien3.ogg", 2.0, 1, 100};
 		titles[] = {0,""};
 	};
 	class 02
 	{
 		name = "02 - Alert Small";
-		sound[] = {"sounds\alertsmall.ogg", 2.0, 1, 100};
+		sound[] = {"sound\alertsmall.ogg", 2.0, 1, 100};
 		titles[] = {0,""};
 	};
 	class 03
 	{
 		name = "03 - Chains";
-		sound[] = {"chains.ogg", 2.0, 1, 100};
+		sound[] = {"sound\chains.ogg", 2.0, 1, 100};
+		titles[] = {0,""};
+	};
+	class 04
+	{
+		name = "04 - Welcome to Orestus";
+		sound[] = {"sound\Welcome_Orestus.ogg", 2.0, 1, 100};
 		titles[] = {0,""};
 	};	
 };
